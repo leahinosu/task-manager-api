@@ -1,0 +1,11 @@
+# Default ignore lists
+env/
+__pycache__/
+.gcloudignore
+*.env
+config/
+
+# Added for this project
+*.rtf
+*.pdf
+

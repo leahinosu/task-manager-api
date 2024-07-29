@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Task Manager
+        </title>
+        <link rel="stylesheet" href="static/styles.css">
+    </head>
+    <body>
+        {% if session %}
+            <h1>Welcome {{session.userinfo.name}}!</h1>
+            <p><a href="/logout">Logout</a></p>
+            <p>Below are your user ID and JWT token for Task Manager API.</p>
+            <div>
+                <p>User ID:</p>
+                <p id="sub">{{session.userinfo.sub}}</p>
+                <p>JWT Token:</p>
+                <p id="id_token">{{session.id_token}}</p>                 
+            </div>
+            <button onclick="copyToClipboard('sub')">Copy <b>User ID</b> to the Clipboard</button><br>
+            <button onclick="copyToClipboard('id_token')">Copy <b>JWT Token</b> to the Clipboard</button><br>
+        {% else %}
+            <h1>Welcome Guest</h1>
+            <p><a href="/login">Login</a></p>
+        {% endif %}
+    </body>
+    <script src="static/scripts.js"></script>
+</html>

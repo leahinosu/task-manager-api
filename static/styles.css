@@ -1,0 +1,38 @@
+body {
+    background-color: black;
+
+}
+body > * {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white
+}
+div {
+    margin: 20px;
+}
+h3{
+    font-size: 30px;
+}
+p, li, a {
+    font-size: 20px;
+}
+
+button {
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+    margin: 5px 10px;
+    border-color: white;
+}
+
+button:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover > b {
+   color: skyblue; 
+}
+
+#id_token {
+    word-wrap: break-word;
+}
